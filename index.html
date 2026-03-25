@@ -1,36 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <title>Designing with web template</title>
-
-    <!-- ################################   styles  ################################ -->     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- lucide icons are loaded at the bottom of body tag -->
-
-    <!-- ########################   scripts and ressources  ######################## -->
-    <!-- Adafruit IO custom library -->
-    <script src="https://cdn.jsdelivr.net/gh/methio/adafruitIO-class@latest/index.js"></script>
-    <!-- alwan color picker -->
-    <script src="https://cdn.jsdelivr.net/npm/alwan@2/dist/js/alwan.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alwan@2/dist/css/alwan.min.css"/>
-    <!-- get color name from its hex value -->
-     <script src="https://chir.ag/projects/ntc/ntc.js"></script>
-    <!-- script custom -->
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Stars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="logo-icon">⚽</span>
+        <span class="logo-text">FOOTBALL STARS</span>
+      </div>
+      <p class="header-subtitle">Top players of the 2024–25 season</p>
+    </div>
+  </header>
 
-    
-    <!-- lucide icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+  <!-- FILTERS -->
+  <section class="filters">
+    <div class="filters-inner">
+      <button class="filter-btn active" data-position="all">All</button>
+      <button class="filter-btn" data-position="Forward">Forwards</button>
+      <button class="filter-btn" data-position="Midfielder">Midfielders</button>
+      <button class="filter-btn" data-position="Defender">Defenders</button>
+      <button class="filter-btn" data-position="Goalkeeper">Goalkeepers</button>
+    </div>
+  </section>
+
+  <!-- CARDS GRID -->
+  <main class="cards-grid" id="cards-container">
+
+    <!-- Card 1 -->
+    <article class="player-card" data-position="Forward">
+      <div class="card-top" style="background: linear-gradient(135deg, #c8102e 0%, #6c1d45 100%);">
+        <span class="card-number">10</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=K+Mbappe&background=ffffff&color=c8102e&size=120&bold=true&font-size=0.4" alt="Kylian Mbappé" />
+      </div>
+      <div class="card-body">
+        <span class="card-position forward">Forward</span>
+        <h2 class="card-name">Kylian Mbappé</h2>
+        <p class="card-club">Real Madrid · 🇫🇷 France</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">28</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">9</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">36</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="player-card" data-position="Forward">
+      <div class="card-top" style="background: linear-gradient(135deg, #004c97 0%, #009bde 100%);">
+        <span class="card-number">9</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=E+Haaland&background=ffffff&color=004c97&size=120&bold=true&font-size=0.4" alt="Erling Haaland" />
+      </div>
+      <div class="card-body">
+        <span class="card-position forward">Forward</span>
+        <h2 class="card-name">Erling Haaland</h2>
+        <p class="card-club">Manchester City · 🇳🇴 Norway</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">32</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">5</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">34</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="player-card" data-position="Forward">
+      <div class="card-top" style="background: linear-gradient(135deg, #a50044 0%, #004d98 100%);">
+        <span class="card-number">19</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=L+Yamal&background=ffffff&color=a50044&size=120&bold=true&font-size=0.4" alt="Lamine Yamal" />
+      </div>
+      <div class="card-body">
+        <span class="card-position forward">Forward</span>
+        <h2 class="card-name">Lamine Yamal</h2>
+        <p class="card-club">FC Barcelona · 🇪🇸 Spain</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">18</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">21</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">38</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="player-card" data-position="Midfielder">
+      <div class="card-top" style="background: linear-gradient(135deg, #132257 0%, #1bb5f0 100%);">
+        <span class="card-number">8</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=J+Bellingham&background=ffffff&color=132257&size=120&bold=true&font-size=0.4" alt="Jude Bellingham" />
+      </div>
+      <div class="card-body">
+        <span class="card-position midfielder">Midfielder</span>
+        <h2 class="card-name">Jude Bellingham</h2>
+        <p class="card-club">Real Madrid · 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">15</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">35</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="player-card" data-position="Midfielder">
+      <div class="card-top" style="background: linear-gradient(135deg, #6cada4 0%, #1a3c5e 100%);">
+        <span class="card-number">21</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=P+Foden&background=ffffff&color=004c97&size=120&bold=true&font-size=0.4" alt="Phil Foden" />
+      </div>
+      <div class="card-body">
+        <span class="card-position midfielder">Midfielder</span>
+        <h2 class="card-name">Phil Foden</h2>
+        <p class="card-club">Manchester City · 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">14</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">11</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">33</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="player-card" data-position="Midfielder">
+      <div class="card-top" style="background: linear-gradient(135deg, #e8000d 0%, #ffd700 100%);">
+        <span class="card-number">18</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=G+Wirtz&background=ffffff&color=e8000d&size=120&bold=true&font-size=0.4" alt="Florian Wirtz" />
+      </div>
+      <div class="card-body">
+        <span class="card-position midfielder">Midfielder</span>
+        <h2 class="card-name">Florian Wirtz</h2>
+        <p class="card-club">Bayer Leverkusen · 🇩🇪 Germany</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">17</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">20</span>
+            <span class="stat-label">Assists</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">37</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="player-card" data-position="Defender">
+      <div class="card-top" style="background: linear-gradient(135deg, #034694 0%, #c8102e 100%);">
+        <span class="card-number">6</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=W+Saliba&background=ffffff&color=034694&size=120&bold=true&font-size=0.4" alt="William Saliba" />
+      </div>
+      <div class="card-body">
+        <span class="card-position defender">Defender</span>
+        <h2 class="card-name">William Saliba</h2>
+        <p class="card-club">Arsenal · 🇫🇷 France</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">89%</span>
+            <span class="stat-label">Duels won</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">36</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 8 -->
+    <article class="player-card" data-position="Defender">
+      <div class="card-top" style="background: linear-gradient(135deg, #1a1a1a 0%, #c0c0c0 100%);">
+        <span class="card-number">23</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=A+Rudiger&background=ffffff&color=1a1a1a&size=120&bold=true&font-size=0.4" alt="Antonio Rüdiger" />
+      </div>
+      <div class="card-body">
+        <span class="card-position defender">Defender</span>
+        <h2 class="card-name">Antonio Rüdiger</h2>
+        <p class="card-club">Real Madrid · 🇩🇪 Germany</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">4</span>
+            <span class="stat-label">Goals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">91%</span>
+            <span class="stat-label">Duels won</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">32</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 9 -->
+    <article class="player-card" data-position="Goalkeeper">
+      <div class="card-top" style="background: linear-gradient(135deg, #da291c 0%, #241f20 100%);">
+        <span class="card-number">1</span>
+        <img class="card-avatar" src="https://ui-avatars.com/api/?name=A+Onana&background=ffffff&color=da291c&size=120&bold=true&font-size=0.4" alt="André Onana" />
+      </div>
+      <div class="card-body">
+        <span class="card-position goalkeeper">Goalkeeper</span>
+        <h2 class="card-name">André Onana</h2>
+        <p class="card-club">Manchester United · 🇨🇲 Cameroon</p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">11</span>
+            <span class="stat-label">Clean sheets</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">74%</span>
+            <span class="stat-label">Save rate</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">35</span>
+            <span class="stat-label">Apps</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Football Stars 2025 &mdash; Built with HTML &amp; CSS</p>
+  </footer>
+
+  <!-- JS for filter buttons -->
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.player-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // update active button
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const position = btn.dataset.position;
+
+        cards.forEach(card => {
+          if (position === 'all' || card.dataset.position === position) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
